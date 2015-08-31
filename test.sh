@@ -3,10 +3,8 @@
 # Bare bones command line regression test.
 # If you run it twice in a row without restarting the server, 
 # some expected values will, of course, vary.
-# 
-# To run the server execute: mvn (package) exec:java
 #
-ADDR="http://localhost:8080/api/notes"
+ADDR="http://localhost/api/notes"
 
 echo    ==== Add 1st record... expect the record back with id=1
 		cURL -i -H "Accept: application/json" -X POST -d '{"body" : "Dont forget to pick up eggs!"}' ${ADDR}
